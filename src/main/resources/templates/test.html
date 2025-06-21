@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .test-container {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-left: 3px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <div class="test-container">
+        <h2>Test Information</h2>
+        <div class="test-item">
+            <p>This is a test page for demonstration purposes.</p>
+        </div>
+        <div class="test-item">
+            <p>Current time: <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span></p>
+        </div>
+        <div class="test-item">
+            <p>Server status: <strong>Running</strong></p>
+        </div>
+    </div>
+</body>
+</html>
